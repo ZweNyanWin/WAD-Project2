@@ -44,7 +44,7 @@ The app combines:
 
 ### 🧾 Signup Page
 <p align="center">
-  <img src="https://github.com/zinmemethet/PlateMate/assets/XXXXXXXXXXXX/signup.png" width="800" />
+  <img src="https://github.com/user-attachments/assets/fda68658-9fd6-4a33-b1fe-8e9718d12d40" width="800" />
   <br/>
   <em>Signup interface for new users to register an account.</em>
 </p>
@@ -53,11 +53,11 @@ The app combines:
 
 👥 Team Members
 
-Zwe Nyan Win
+Zwe Nyan Win 
 
-Su Phyu Sin
+Su Phyu Sin 
 
-Zin Me Me Thet
+Zin Me Me Thet 
 
 ## ⚙️ How to Run Locally
 
