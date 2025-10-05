@@ -35,7 +35,7 @@ The app combines:
   <em>Form to create a new recipe with dynamic ingredient and step fields.</em>
 </p>
 
-###⭐ Reviews
+### ⭐ Reviews
 <p align="center"> 
   <img src="https://github.com/user-attachments/assets/a71492f4-2e8c-4ba8-9b11-9b1b66a348b2" width="800" /> 
   <br/> 
