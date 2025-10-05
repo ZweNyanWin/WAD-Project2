@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useAuth } from './contexts/AuthContext'
+import { apiCall, getImagePath } from '../lib/api'
 
 export default function Page() {
   const [recipes, setRecipes] = useState([])
@@ -19,7 +20,7 @@ export default function Page() {
     setLoading(true)
     setError(null)
     
-    fetch('/api/recipes')
+    apiCall('/recipes')
       .then(r => {
         if (!r.ok) {
           throw new Error('Failed to fetch recipes')
@@ -175,7 +176,7 @@ export default function Page() {
               <div className="recipe-image">
                 {recipe.photo ? (
                   <img 
-                    src={recipe.photo} 
+                    src={getImagePath(recipe.photo)} 
                     alt={recipe.title || 'Recipe'}
                     style={{ 
                       width: '100%', 

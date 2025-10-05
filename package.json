@@ -6,7 +6,7 @@
     "dev": "next dev",
     "server": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js -p 3002"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",

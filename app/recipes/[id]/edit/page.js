@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import ProtectedRoute from '../../../components/ProtectedRoute'
 import { useAuth } from '../../../contexts/AuthContext'
 import Link from 'next/link'
+import { apiCall } from '../../../../lib/api'
 
 export default function EditRecipe({ params }) {
   const [recipe, setRecipe] = useState(null)
@@ -24,7 +25,7 @@ export default function EditRecipe({ params }) {
     if (!id) return
     
     // Load recipe to edit
-    fetch(`/api/recipes/${id}`)
+    apiCall(`/recipes/${id}`)
       .then(r => {
         if (!r.ok) {
           throw new Error('Recipe not found')
