@@ -23,7 +23,7 @@ export default function RecipePage({ params }) {
     
     setLoading(true)
     setError(null)
-    
+
     // Load recipe
     apiCall(`/recipes/${id}`)
       .then(r => {
@@ -216,7 +216,7 @@ export default function RecipePage({ params }) {
                     if (confirm('Are you sure you want to delete this recipe? This action cannot be undone.')) {
                       try {
                         const token = localStorage.getItem('token')
-                        const response = await fetch(`/api/recipes/${id}`, {
+                        const response = await apiCall(`/recipes/${id}`, {
                           method: 'DELETE',
                           headers: {
                             'Authorization': `Bearer ${token}`
