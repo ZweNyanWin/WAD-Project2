@@ -2,6 +2,8 @@
 
 A collaborative recipe-sharing web app built with **Next.js + Express + MongoDB**, enabling users to create, browse, and manage their own cooking recipes with a clean and responsive UI.
 
+---
+
 ## 📖 Project Description
 **PlateMate** is a full-stack recipe management platform where users can:
 - ✍️ Create and edit new recipes with ingredients, steps, and photos  
@@ -21,33 +23,41 @@ The app combines:
 
 ### 🏠 Browse Recipes
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/xxxxxxxxxxxxxxxxxxxx" width="800" />
+  <img src="https://github.com/zinmemethet/PlateMate/assets/XXXXXXXXXXXX/browse.png" width="800" />
   <br/>
   <em>Recipe browsing page showing different dishes and filters.</em>
 </p>
 
 ### ➕ Create New Recipe
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/xxxxxxxxxxxxxxxxxxxx" width="800" />
+  <img src="https://github.com/zinmemethet/PlateMate/assets/XXXXXXXXXXXX/create.png" width="800" />
   <br/>
   <em>Form to create a new recipe with dynamic ingredient and step fields.</em>
 </p>
 
 ### 🔑 Login Page
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/xxxxxxxxxxxxxxxxxxxx" width="800" />
+  <img src="https://github.com/zinmemethet/PlateMate/assets/XXXXXXXXXXXX/login.png" width="800" />
   <br/>
   <em>Login interface for existing users.</em>
 </p>
 
 ### 🧾 Signup Page
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/xxxxxxxxxxxxxxxxxxxx" width="800" />
+  <img src="https://github.com/zinmemethet/PlateMate/assets/XXXXXXXXXXXX/signup.png" width="800" />
   <br/>
   <em>Signup interface for new users to register an account.</em>
 </p>
 
 ---
+
+👥 Team Members
+
+Zwe Nyan Win
+
+Su Phyu Sin
+
+Zin Me Me Thet
 
 ## ⚙️ How to Run Locally
 
@@ -65,13 +75,3 @@ echo "JWT_SECRET=<your-secret-key>" >> .env
 
 # Run the app
 npm run dev
-
-
-Team Members
-Zwe Nyan Win - 6540179
-Su Phyu Sin - 6540146
-Zin Me Me That - 6611706
-
-
-
-
