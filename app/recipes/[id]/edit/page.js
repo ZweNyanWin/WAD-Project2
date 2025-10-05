@@ -112,7 +112,7 @@ export default function EditRecipe({ params }) {
 
     try {
       const token = localStorage.getItem('token')
-      const response = await fetch(`/api/recipes/${id}`, { 
+      const response = await apiCall(`/recipes/${id}`, { 
         method: 'PUT', 
         body,
         headers: {
@@ -308,11 +308,42 @@ export default function EditRecipe({ params }) {
             </div>
 
             {/* Form Actions */}
-            <div className="form-actions">
-              <Link href={`/recipes/${id}`} className="btn-secondary" style={{ textDecoration: 'none' }}>
+            <div className="form-actions" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid #dee2e6' }}>
+              <Link 
+                href={`/recipes/${id}`} 
+                className="btn-secondary" 
+                style={{ 
+                  textDecoration: 'none', 
+                  background: '#6c757d', 
+                  color: 'white', 
+                  padding: '0.75rem 1.5rem', 
+                  borderRadius: '8px', 
+                  fontWeight: '500',
+                  fontSize: '1rem',
+                  border: 'none',
+                  cursor: 'pointer',
+                  display: 'inline-block',
+                  textAlign: 'center'
+                }}
+              >
                 Cancel
               </Link>
-              <button type="submit" className="btn-primary" disabled={saving}>
+              <button 
+                type="submit" 
+                className="btn-primary" 
+                disabled={saving}
+                style={{ 
+                  background: '#ff7a18', 
+                  color: 'white', 
+                  border: 'none', 
+                  padding: '0.75rem 1.5rem', 
+                  borderRadius: '8px', 
+                  cursor: saving ? 'not-allowed' : 'pointer', 
+                  fontWeight: '500',
+                  fontSize: '1rem',
+                  opacity: saving ? 0.7 : 1
+                }}
+              >
                 {saving ? 'Saving...' : 'Update Recipe'}
               </button>
             </div>

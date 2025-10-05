@@ -47,7 +47,16 @@ export default function Page() {
   const filteredRecipes = recipes.filter(recipe => {
     const matchesSearch = recipe.title?.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesDifficulty = !selectedDifficulty || recipe.difficulty === selectedDifficulty
-    return matchesSearch && matchesDifficulty
+
+    // Ingredients filter: user can type one or multiple tokens (separated by spaces or commas)
+    let matchesIngredients = true
+    if (ingredients && ingredients.trim()) {
+      const tokens = ingredients.toLowerCase().split(/[,\s]+/).filter(Boolean)
+      // require every token to match at least one ingredient name on the recipe
+      matchesIngredients = tokens.every(tok => Array.isArray(recipe.ingredients) && recipe.ingredients.some(ing => (ing.name || '').toLowerCase().includes(tok)))
+    }
+
+    return matchesSearch && matchesDifficulty && matchesIngredients
   })
 
   if (loading) {
