@@ -23,21 +23,21 @@ The app combines:
 
 ### 🏠 Browse Recipes
 <p align="center">
-  <img src="https://github.com/zinmemethet/PlateMate/assets/XXXXXXXXXXXX/browse.png" width="800" />
+  <img src="https://github.com/user-attachments/assets/c915943c-1a37-45cc-8ea3-1aa83020fadd"width="800" />
   <br/>
   <em>Recipe browsing page showing different dishes and filters.</em>
 </p>
 
 ### ➕ Create New Recipe
 <p align="center">
-  <img src="https://github.com/zinmemethet/PlateMate/assets/XXXXXXXXXXXX/create.png" width="800" />
+  <img src="https://github.com/user-attachments/assets/3b6ff8c5-18b3-469a-a26e-3345bcf6cea0" width="800" />
   <br/>
   <em>Form to create a new recipe with dynamic ingredient and step fields.</em>
 </p>
 
 ### 🔑 Login Page
 <p align="center">
-  <img src="https://github.com/zinmemethet/PlateMate/assets/XXXXXXXXXXXX/login.png" width="800" />
+  <img src="https://github.com/user-attachments/assets/8b742623-4c48-4ef0-9571-e1c38a405f5a" width="800" />
   <br/>
   <em>Login interface for existing users.</em>
 </p>
