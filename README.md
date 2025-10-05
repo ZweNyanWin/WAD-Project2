@@ -53,11 +53,11 @@ The app combines:
 
 👥 Team Members
 
-Zwe Nyan Win 
+Zwe Nyan Win https://github.com/ZweNyanWin/ZweNyanWin.github.io
 
-Su Phyu Sin 
+Su Phyu Sin https://github.com/suphyusin
 
-Zin Me Me Thet 
+Zin Me Me Thet https://github.com/ymmiz
 
 ## ⚙️ How to Run Locally
 
