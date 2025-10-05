@@ -1,6 +1,7 @@
 "use client"
 
 import { createContext, useContext, useState, useEffect } from 'react'
+import { apiCall } from '../../lib/api'
 
 const AuthContext = createContext()
 
@@ -17,7 +18,7 @@ export function AuthProvider({ children }) {
     try {
       const token = localStorage.getItem('token')
       if (token) {
-        const response = await fetch('/api/auth/me', {
+        const response = await apiCall('/auth/me', {
           headers: { Authorization: `Bearer ${token}` }
         })
         if (response.ok) {
@@ -35,7 +36,7 @@ export function AuthProvider({ children }) {
   }
 
   async function login(email, password) {
-    const response = await fetch('/api/auth/login', {
+    const response = await apiCall('/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
@@ -53,7 +54,7 @@ export function AuthProvider({ children }) {
   }
 
   async function signup(name, email, password) {
-    const response = await fetch('/api/auth/signup', {
+    const response = await apiCall('/auth/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password })

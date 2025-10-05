@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '../../contexts/AuthContext'
 import Link from 'next/link'
+import { apiCall, getImagePath } from '../../../lib/api'
 
 export default function RecipePage({ params }) {
   const [recipe, setRecipe] = useState(null)
@@ -24,7 +25,7 @@ export default function RecipePage({ params }) {
     setError(null)
     
     // Load recipe
-    fetch(`/api/recipes/${id}`)
+    apiCall(`/recipes/${id}`)
       .then(r => {
         if (!r.ok) {
           throw new Error('Recipe not found')
@@ -43,7 +44,7 @@ export default function RecipePage({ params }) {
 
     // Load reviews
     setReviewsLoading(true)
-    fetch(`/api/reviews?recipeId=${id}`)
+    apiCall(`/reviews?recipeId=${id}`)
       .then(r => {
         if (!r.ok) {
           throw new Error('Failed to load reviews')
@@ -78,7 +79,7 @@ export default function RecipePage({ params }) {
 
     try {
       const token = localStorage.getItem('token')
-      const response = await fetch('/api/reviews', {
+      const response = await apiCall('/reviews', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -174,15 +175,18 @@ export default function RecipePage({ params }) {
             height: '300px', 
             borderRadius: '12px 12px 0 0',
             overflow: 'hidden',
-            background: '#f8f9fa'
+            background: '#f8f9fa',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
           }}>
             <img 
-              src={recipe.photo} 
+              src={getImagePath(recipe.photo)} 
               alt={recipe.title}
               style={{ 
-                width: '100%', 
-                height: '100%', 
-                objectFit: 'cover' 
+                maxWidth: '100%', 
+                maxHeight: '100%', 
+                objectFit: 'contain' 
               }} 
             />
           </div>

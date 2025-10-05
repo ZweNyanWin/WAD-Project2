@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import ProtectedRoute from '../../components/ProtectedRoute'
 import { useAuth } from '../../contexts/AuthContext'
+import { apiCall } from '../../../lib/api'
 
 export default function NewRecipe() {
   const [title, setTitle] = useState('')
@@ -70,7 +71,7 @@ export default function NewRecipe() {
 
     try {
       const token = localStorage.getItem('token')
-      const response = await fetch('/api/recipes', { 
+      const response = await apiCall('/recipes', { 
         method: 'POST', 
         body,
         headers: {
