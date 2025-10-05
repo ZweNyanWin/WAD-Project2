@@ -35,6 +35,13 @@ The app combines:
   <em>Form to create a new recipe with dynamic ingredient and step fields.</em>
 </p>
 
+<p align="center"> 
+  <img src="https://github.com/user-attachments/assets/placeholder-review-screenshot.png" width="800" /> 
+  <br/> 
+  <em>Rate recipes (1–5 stars), leave comments, and browse community feedback.</em> 
+</p>
+
+
 ### 🔑 Login Page
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8b742623-4c48-4ef0-9571-e1c38a405f5a" width="800" />
